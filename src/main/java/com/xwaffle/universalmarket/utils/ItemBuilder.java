@@ -35,7 +35,7 @@ public class ItemBuilder {
         itemStack = ItemStack.of(itemType, ammount);
         DataContainer container = itemStack.toContainer();
         container.set(DataQuery.of("UnsafeDamage"), meta);
-        itemStack.setRawData(container);
+        itemStack = ItemStack.builder().fromContainer(container).build();
     }
 
     public ItemBuilder setName(Text name) {

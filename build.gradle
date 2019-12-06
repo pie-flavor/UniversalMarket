@@ -26,8 +26,9 @@ version = pluginVersion
 
 dependencies {
     compile 'org.spongepowered:spongeapi:7.0.0'
-    compile files('libs/spongeforge-1.12.2-2555-7.1.0-BETA-2837.jar')
-
+    compile ('org.spongepowered:spongeforge:1.12.2-2555-7.1.0-BETA-2837') {
+        exclude group: 'org.spongepowered', module: 'testplugins'
+    }
 }
 
 repositories {
